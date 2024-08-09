@@ -1,5 +1,4 @@
 <?php
-   
     $firstname = isset($_POST['firstname']) ? htmlspecialchars($_POST['firstname']) : 'Not provided';
     $middlename = isset($_POST['middlename']) ? htmlspecialchars($_POST['middlename']) : 'Not provided';
     $lastname = isset($_POST['lastname']) ? htmlspecialchars($_POST['lastname']) : 'Not provided';
@@ -12,10 +11,9 @@
     $address = isset($_POST['address']) ? htmlspecialchars($_POST['address']) : 'Not provided';
 
     $full_name = $firstname . ' ' . $middlename . ' ' . $lastname;
-    
+
     $name_background_color = ($sex === 'Male') ? '#0000FF' : (($sex === 'Female') ? '#FF0000' : '#FFFFFF');
 
-   
     echo "<!DOCTYPE html>";
     echo "<html lang='en'>";
     echo "<head>";
@@ -33,9 +31,7 @@
     echo "<body>";
     echo "<div class='container'>";
     echo "<h1>Registration Summary</h1>";
-    echo "<p><strong>First Name:</strong> <span class='name'>$firstname</span></p>";
-    echo "<p><strong>Middle Name:</strong> <span class='name'>$middlename</span></p>";
-    echo "<p><strong>Last Name:</strong> <span class='name'>$lastname</span></p>";
+    echo "<p><strong>Name:</strong> <span class='name'>$full_name</span></p>";
     echo "<p><strong>Email:</strong> $email</p>";
     echo "<p><strong>Phone:</strong> $phone_number</p>";
     echo "<p><strong>Sex:</strong> $sex</p>";
