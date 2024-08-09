@@ -11,6 +11,7 @@
     $program = isset($_POST['program']) ? htmlspecialchars($_POST['program']) : 'Not provided';
     $address = isset($_POST['address']) ? htmlspecialchars($_POST['address']) : 'Not provided';
 
+    $full_name = $firstname . ' ' . $middlename . ' ' . $lastname;
     
     $name_background_color = ($sex === 'Male') ? '#0000FF' : (($sex === 'Female') ? '#FF0000' : '#FFFFFF');
 
